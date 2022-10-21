@@ -17,19 +17,21 @@ function tollTipOn(){
     setTimeout( ()=>{
         tolltip.style.display = 'none'
         tolltipTriangle.style.display = 'none'
+        responsiveScreen(false);
     }, 4000)
     clearTimeout()
-    responsiveScreen(false);
 }
 function responsiveScreen(boolean){
     
-    if(boolean == true){
+    if(boolean){
         if(window.screen.width >= 360 && window.screen.width <= 767){
             document.querySelector('#section').style.height = '110vh';
+            console.log(document.querySelector('#section').style.height);
         }
     }
     if(boolean == false){
         document.querySelector('#section').style.height = '91vh';
+        console.log(document.querySelector('#section').style.height);
     }
 }
 
