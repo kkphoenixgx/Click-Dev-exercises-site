@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-auto, initial-scale=1 user-scalable=no">
+        <link rel="icon" type="image/png" href="../Assets/exercises-icon.png">
+        
+        <title>Calculador de médias escolares</title>
+        <link rel="stylesheet" href="../Style/stylesheet.css">
+        <link rel="stylesheet" href="../Style/otherpages/exercise-2.css">
+
+        <!-- Javascript -->
+        <script type="module" defer src="../Src/main.js"></script>
+        <script type="module" defer src="../Src/controller/exercise2.js"></script>
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1>Calculador de médias escolares</h1>
+            <a href="../index.html" style="margin: 0.5% 0% 0% 2%;"> <img src="../Assets/home-model-icon.png" alt="Home"> </a>
+        </header>
+
+        <section id="section">
+            <h2>Nesse exercício, deve-se calcular a média de um aluno com n notas </h2>
+            
+            <div class="container">
+                <h3 id="third-tittle">Digite as notas do aluno em questão separando-as por vírgula</h3>
+                
+                </br>
+                <input type="text" id="input-values">
+                </br>
+                
+                <button id="btn-send">OK</button>
+            </div>
+
+            <div class="tooltip" id="tooltip">
+                <div class="simpleTriangle" id="simpleTriangle"></div>
+                <span>Exemplo: 2, 6, 7, 8, 9</span>
+            </div>
+
+            <div id="result" style="display: none;"> X </div>
+            <button id="btn-clear" style="display: none;" >CLEAR</button>
+        </section>
+
+        <footer>
+            <div>
+                <h2>Considerações:</h2>
+                <p>Aqui contém todos os exercícios feitos no meu curso básico de iniciativa à  programação do Click Dev com professor Marco Sanuto, engenheiro de software da NTTDATA</p>
+                <p>Data: Novembro 2022</p>
+            </div>
+
+            <a href="https://github.com/kkphoenixgx"> 
+                <img src="../Assets/fotoPerfil.jpg" alt="kkphoenixGithub"> 
+            </a>
+
+        </footer>
+
+    </body>
+</html>
+

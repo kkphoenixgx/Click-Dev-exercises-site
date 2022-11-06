@@ -1,0 +1,176 @@
+h1{
+    font-size: larger;
+}
+
+section{
+    align-items: center;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section p{
+    font-size: 1.3em;
+}
+
+section .container{
+    background-color: black;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 5%;
+    border-radius: 45px;
+}
+
+.container h2 {
+    animation: rainbow 3s linear infinite;
+}
+.container input{
+    height: 3vh;
+    width: 82%;
+    border-radius: 10px;
+    background: #827d89;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+section button {
+    margin-top: 3vh;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 45px;
+    background-color: #827d89;
+    opacity: 0.6;
+    color: white;
+}
+section button:hover{
+    opacity: 1;
+}
+
+/* ---------- Context box ---------- */
+
+.tooltip{
+    display: none;
+    position: absolute;
+    top: 43%;
+    right: 3%;
+}
+
+span {
+    transition: 0.5s ease-in-out;
+    color: #fff;
+    background-color: #32244b;
+    width: 56%;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.simpleTriangle, .desktopTriangle{
+    margin-left: 3vw;
+    transition: 0.5s ease-in-out;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 22px solid #32244b;
+}
+
+.desktopTooltip{
+    position: absolute;
+    top: 34%;
+    right: 18%;
+}
+
+.result-right{
+    font-size: 1.8em;
+    color: greenyellow;
+    margin-top: 3vh;
+}
+
+/* ------ Animation ------ */
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+
+    15% {
+        color: orange;
+    }
+
+    30% {
+        color: yellow;
+    }
+
+    45% {
+        color: greenyellow;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    75% {
+        color: indigo;
+    }
+
+    100% {
+        color: violet;
+    }
+}
+
+/* ------ Responsive ------*/
+
+@media only screen and (max-device-width: 630px) {
+    .tooltip{
+        right: 3%;
+    }
+} 
+
+@media only screen and (min-device-width: 631px) and (max-device-width: 704px) {
+    .tooltip{
+        right: 19%;
+        top: 44%;
+    }
+    .simpleTriangle{
+        margin-left: 13%;
+    }
+}
+
+@media only screen and (min-device-width: 705px) and (max-device-width: 860px){
+    
+    .tooltip{
+        right: 16%;
+    }
+
+    .simpleTriangle{
+        margin-left: 11%;
+    }
+}
+
+@media only screen and (min-device-width: 861px) and (max-device-width: 1224px){
+    .tooltip{
+        right: 21%;
+    }
+    .simpleTriangle{
+        margin-left: 10%;
+    }
+    .desktopTooltip{
+        right: 25%;
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    .tooltip{
+        right: 30%;
+    }
+    .simpleTriangle{
+        margin-left: 12%;
+    }
+    .desktopTooltip{
+        right: 25%;
+    }
+}
