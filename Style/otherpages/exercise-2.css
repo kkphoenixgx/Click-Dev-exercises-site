@@ -24,7 +24,7 @@ section .container{
     border-radius: 45px;
 }
 
-.container h2 {
+.container h3 {
     animation: rainbow 3s linear infinite;
 }
 .container input{
@@ -87,6 +87,11 @@ span {
 .result-right{
     font-size: 1.8em;
     color: greenyellow;
+    margin-top: 3vh;
+}
+.result-wrong{
+    font-size: 1em;
+    color: red;
     margin-top: 3vh;
 }
 

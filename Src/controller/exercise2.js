@@ -13,10 +13,17 @@ btnSubmit.addEventListener('click', ()=>{
     
     let averageRate
     const answer =  inputValues.value 
-    if(typeof answer != 'string') return // TODO: Error massage
-    
+    if(typeof answer != 'string'){
+        errorMassage();
+        return
+    }
     try {
         let answerArray = answer.split(',')
+        if(answerArray.length < 2){
+            errorMassage();
+            return
+        }
+
         let result = 0;
         answerArray.forEach( item => {
           result = result + eval(item)
@@ -30,7 +37,10 @@ btnSubmit.addEventListener('click', ()=>{
 
         btnClear.style.display = "block"
 
-    } catch (error) {  } // TODO: ERROR MASSAGE
+    } catch (error) { 
+        errorMassage(); 
+        console.error(error)
+    }
 
 })
 
@@ -66,6 +76,14 @@ function tollTipOn(){
         tooltip.style.flexDirection = 'unset'
     }, 2000)
     clearTimeout()
+}
+
+function errorMassage(){
+    resultObject.innerHTML = "Você digitou as médias de forma errada, veja um exemplo colocando o mouse em cima do texto colorido"
+    resultObject.classList.add("result-wrong")
+    resultObject.style.display = "block"
+
+    btnClear.style.display = "block"
 }
 
 // Simple functions
